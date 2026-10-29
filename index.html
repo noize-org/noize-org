@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noize</title>
+    <meta property="og:title" content="noize">
+    <meta property="og:description" content="noize">
+    <meta property="og:image" content="https://i1.sndcdn.com/avatars-000559533807-msz08j-t500x500.jpg">
+    <meta property="og:url" content="https://soundcloud.com/mynoize">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .logo {
+            font-size: 6rem;
+            font-weight: 300;
+            letter-spacing: -0.05em;
+            color: #ffffff;
+            margin: 0;
+            text-transform: lowercase;
+            opacity: 0.9;
+        }
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #ffffff;
+            margin: 1.5rem 0;
+            opacity: 0.3;
+        }
+        .waveform {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 4px;
+            height: 60px;
+            margin: 2rem 0;
+        }
+        .waveform .bar {
+            width: 6px;
+            background: #ffffff;
+            opacity: 0.4;
+            animation: wave 1.5s ease-in-out infinite;
+            animation-play-state: paused;
+        }
+        .waveform .bar:nth-child(2n) { animation-duration: 2s; }
+        .waveform .bar:nth-child(3n) { animation-duration: 1.8s; }
+        .waveform .bar:nth-child(4n) { animation-duration: 1.6s; }
+        @keyframes wave {
+            0%, 100% { height: 20%; }
+            50% { height: 80%; }
+        }
+        .links {
+            margin-top: 2.5rem;
+        }
+        .soundcloud-link {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #ffffff;
+            border-radius: 50px;
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        .soundcloud-link:hover {
+            background: #ffffff;
+            color: #000000;
+            opacity: 1;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 4rem;
+            }
+            .waveform {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="logo">noize</h1>
+    
+    
+    
+    <div class="waveform">
+        <div class="bar" style="height:30%; animation-delay: 0s;"></div>
+        <div class="bar" style="height:50%; animation-delay: 0.3s;"></div>
+        <div class="bar" style="height:40%; animation-delay: 0.6s;"></div>
+        <div class="bar" style="height:70%; animation-delay: 0.9s;"></div>
+        <div class="bar" style="height:35%; animation-delay: 1.2s;"></div>
+        <div class="bar" style="height:60%; animation-delay: 1.5s;"></div>
+        <div class="bar" style="height:45%; animation-delay: 1.8s;"></div>
+        <div class="bar" style="height:75%; animation-delay: 2.1s;"></div>
+    </div>
+    
+    <div class="links">
+        <a href="https://soundcloud.com/mynoize" class="soundcloud-link" target="_blank" rel="noopener">Listen on SoundCloud</a>
+    </div>
+</body>
+</html>
